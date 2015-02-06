@@ -1,0 +1,13 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - "%{clientcert}"
+  - "%{sp_serial_number}"
+  - "%{role}"
+  - "%{mac_laptop}"
+  - "%{operatingsystem}"
+  - global
+
+:yaml:
+  :datadir: "/etc/puppet/hieradata/%{environment}"
