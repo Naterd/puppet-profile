@@ -1,4 +1,4 @@
-class profile::wallpaper::default_wallpaper.pp (
+class profile::wallpaper::default_wallpaper (
 ){
 
     outset::loginonce{'wallpaper':
