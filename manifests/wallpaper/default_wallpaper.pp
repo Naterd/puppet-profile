@@ -1,6 +1,4 @@
-class profile::wallpaper::default_wallpaper (
-){
-
+class profile::wallpaper::default_wallpaper{
     outset::loginonce{'wallpaper':
         script => 'puppet:///modules/profile/wallpaper/bisd_default_desktop.sh'
     }
