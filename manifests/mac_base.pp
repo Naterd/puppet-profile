@@ -6,9 +6,13 @@ class profile::mac_base {
 
   $min_os_version = '10.9'
 
-  if version_compare($::macosx_productversion_major, $min_os_version) > 0 {
+  if version_compare($::macosx_productversion_major, $min_os_version) < 0 {
+    notice('This is an unsupported operating system version. You are older than 10.9.')
+  }
+  else {
     include managedmac
   }
+  
 
   include desktoppicture
   include outset
