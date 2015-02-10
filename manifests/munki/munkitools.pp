@@ -28,7 +28,7 @@ class profile::munki::munkitools(
     alias    => 'munkitools',
     ensure   => installed,
     source   => 'https://github.com/munki/munki/releases/download/v2.2.0.2399/munkitools-2.2.0.2399.pkg',
-    notify   => Exec["/sbin/reboot"],
+  #  notify   => Exec["/sbin/reboot"],
   }
   
   ## If we need to, touch the bootstrap file
