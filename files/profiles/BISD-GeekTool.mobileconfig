@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>org.tynsoe.geeklet.shell</key>
+				<dict>
+					<key>Set-Once</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>91AD6DFE-D760-44F1-8190-FA75645E7BC2</key>
+								<dict>
+									<key>BackgroundColor</key>
+									<data>
+								BAtzdHJlYW10
+								eXBlZIHoA4QB
+								QISEhAdOU0Nv
+								bG9yAISECE5T
+								T2JqZWN0AIWE
+								AWMDhAJmZgAA
+								hg==
+									</data>
+									<key>Command</key>
+									<string>#!/bin/sh
+
+# Created by Erik Gomez
+# Modified 30-10-2013
+##### White Backgrounds will kill you!
+# Modified by Clayton Burlison for use at Birdville ISD
+# Date Modified June 25, 2014
+
+#### Script Variables
+Computer_Name=`scutil --get ComputerName`
+HostName=`scutil --get HostName`
+LocalHostName=`scutil --get LocalHostName`
+OS_Version=`sw_vers | grep "ProductVersion:" | awk '{print $2}'`
+OS_Sub_Build=`sw_vers | grep "BuildVersion:" | awk '{print $2}'`
+Hardware_ID=`sysctl hw.model | grep "hw.model:" | awk '{print $2}'`
+IP_en0=`ifconfig en0 | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+IP_en1=`ifconfig en1 | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+IP_en2=`ifconfig en2 | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+IP_en3=`ifconfig en3 | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+IP_en4=`ifconfig en4 | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+IP_en5=`ifconfig en5 | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'`
+SSID=`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`
+
+#### Display Computer Names
+echo "Computer Name: $Computer_Name";
+#echo "Host Name: $HostName";
+#echo "LocalHost Name: $LocalHostName";
+
+#### Display User Name
+echo "Username: $USER";
+
+#### Display Operating System and Sub Build
+echo "Operating System: $OS_Version"_"$OS_Sub_Build";
+
+#### Display Hardware ID
+echo "Hardware ID: $Hardware_ID";
+
+### Spacing to make things pretty
+echo ""
+
+### This will show the Current IP addresses.
+### This should show all IP Addresses:
+### Wi-FI, Ethernet 1 &amp; 2, and even Thunderbolt NICs
+if [ "$IP_en0" = '' ] &amp;&amp; [ "$IP_en1" = '' ] &amp;&amp; [ "$IP_en2" = '' ] &amp;&amp; [ "$IP_en3" = '' ] &amp;&amp; [ "$IP_en4" = '' ] &amp;&amp; [ "$IP_en5" = '' ]
+	then
+		echo "IP Address: No connection found"
+	else
+		if [ "$IP_en0" != '' ]
+			then 
+				echo "IP Address: $IP_en0"
+ 			else
+ 				echo "" &gt;/dev/null
+ 		fi
+ 		if [ "$IP_en1" != '' ]
+			then 
+				echo "IP Address: $IP_en1"
+ 			else
+ 				echo "" &gt;/dev/null
+ 		fi
+ 		if [ "$IP_en2" != '' ]
+			then 
+				echo "IP Address: $IP_en2"
+ 			else
+ 				echo "" &gt;/dev/null
+ 		fi
+ 		if [ "$IP_en3" != '' ]
+			then 
+				echo "IP Address: $IP_en3"
+ 			else
+ 				echo "" &gt;/dev/null
+ 		fi
+ 		if [ "$IP_en4" != '' ]
+			then 
+				echo "IP Address: $IP_en4"
+ 			else
+ 				echo "" &gt;/dev/null
+ 		fi
+ 		if [ "$IP_en5" != '' ]
+			then 
+				echo "IP Address: $IP_en5"
+ 			else
+ 				echo "" &gt;/dev/null
+ 		fi
+fi		
+
+
+### Display current wireless SSID
+if [ "$SSID" = '' ]
+	then
+		echo "Wireless SSID: Disconnected"
+	else
+		if [ "$SSID" = "           SSID: " ]
+			then
+				echo "Wireless SSID: Disconnected"
+			else
+				echo "Wireless SSID: $SSID"
+		fi	
+fi
+
+### Spacing to make things pretty
+echo ""
+
+#### Technology Support
+echo "For Help Desk Support call: x3819"
+</string>
+									<key>DisplayStatusImage</key>
+									<false/>
+									<key>DoesOverrideText</key>
+									<false/>
+									<key>DropShadow</key>
+									<false/>
+									<key>FailureImage</key>
+									<data>
+								TU0AKgAABAj/
+								//8AAAAAAAAA
+								AAAAAAAAAAAA
+								AAAAAAAAAAAN
+								AAAAGgAAACAA
+								AAAaAAAADQAA
+								AAAAAAAAAAAA
+								AAAAAAAAAAAA
+								////AAAAAAAA
+								AAAAAAAAAAAA
+								AAgAAQFYGBYW
+								qysoKOExLy/9
+								Kygo4RgWFqoA
+								AQFXAAAACAAA
+								AAAAAAAAAAAA
+								AP///wAAAAAA
+								AAAAAAAAAAgG
+								BgZ8Rz4+8qWX
+								l//c09P/6+Tl
+								/93T0/+ll5f/
+								Rz4+8gYGBnwA
+								AAAIAAAAAAAA
+								AAD///8AAAAA
+								AAAAAAQHAgJk
+								SS0t9Kt9ff/c
+								t7j/7NHS/+7T
+								0//s0dL/3be4
+								/6t9ff9JLS30
+								BwICZQAAAAUA
+								AAAA////AAAA
+								AAAAAAAmLhAQ
+								zJA+P/+1TEv/
+								xmNe/8twav/L
+								cGr/y3Bq/8Zj
+								Xf+0TEv/kD4/
+								/y4QEMwAAAAm
+								AAAAAP///wAA
+								AAAABgAATmAZ
+								GvitMi//uSwh
+								/8E+Mf/HTED/
+								yU9D/8hNQP/D
+								PjL/uiwi/64x
+								L/9gGRr4BwAA
+								TQAAAAD///8A
+								AAAAARUAAGiJ
+								GBr/wzgx/8tC
+								NP/TV0n/3WZa
+								/+BqXf/eaFr/
+								1VhL/85DNP/G
+								OTL/ihga/xYA
+								AGcAAAAB////
+								AAAAAAkYAABs
+								lRoW/9JNQP/d
+								YFL/63Jm//KA
+								dv/2hXv/9IF3
+								/+10Zv/gYVP/
+								1k5B/5YaFv8Y
+								AABrAAAACP//
+								/wAAAAANDAAA
+								Y4UZEu/iXU3/
+								8Hhr//yFef/+
+								lYn//puP//+X
+								iv/8h3r/8Xlr
+								/+ZdTv+HGRLw
+								DQAAZAAAAAv/
+								//8AAAAADwAA
+								AE5aDAfL4FZI
+								//6LgP//mI7/
+								/qSY//+rnv/+
+								p5r//5qP//+N
+								gf/nWEn/Ww0H
+								ywAAAE0AAAAN
+								////AAAAAAwA
+								AAAyDwAAjJIn
+								H+z/gHL//6qe
+								//+4rP//vrL/
+								/7uu//+soP//
+								g3X/lioh7BEA
+								AIsAAAAzAAAA
+								DP///wAAAAAF
+								AAAAIAAAAF0d
+								AACpkTUq6dt2
+								Z/z6n5D//7Sj
+								//qhkv/bd2r8
+								kTYr6R4AAKoA
+								AABcAAAAIAAA
+								AAX///8AAAAA
+								AQAAAA0AAAAy
+								AAAAZwYAAKI0
+								DgrIYi4l2XlA
+								NeJiLiXZNA4K
+								xwYAAKEAAABo
+								AAAAMwAAAA0A
+								AAAB////AAAA
+								AAAAAAADAAAA
+								EQAAADQAAABd
+								AAAAfAAAAI8A
+								AACVAAAAjgAA
+								AHsAAABbAAAA
+								NAAAABIAAAAD
+								AAAAAP///wAA
+								AAAAAAAAAAAA
+								AAMAAAAOAAAA
+								IQAAADYAAABG
+								AAAATAAAAEUA
+								AAA2AAAAIgAA
+								AA4AAAAEAAAA
+								AAAAAAD///8A
+								AAAAAAAAAAAA
+								AAAAAAAAAQAA
+								AAUAAAALAAAA
+								EAAAABMAAAAR
+								AAAACwAAAAUA
+								AAABAAAAAAAA
+								AAAAAAAAAA0B
+								AAADAAAAAQAQ
+								AAABAQADAAAA
+								AQAQAAABAgAD
+								AAAABAAABKoB
+								AwADAAAAAQAB
+								AAABBgADAAAA
+								AQACAAABEQAE
+								AAAAAQAAAAgB
+								EgADAAAAAQAB
+								AAABFQADAAAA
+								AQAEAAABFgAD
+								AAAAAQAQAAAB
+								FwAEAAAAAQAA
+								BAABHAADAAAA
+								AQABAAABUgAD
+								AAAAAQACAAAB
+								UwADAAAABAAA
+								BLIAAAAAAAgA
+								CAAIAAgAAQAB
+								AAEAAQ==
+									</data>
+									<key>FontFamily</key>
+									<string>LucidaGrande</string>
+									<key>FontSize</key>
+									<real>20</real>
+									<key>GeekletFrame</key>
+									<string>{{25, 50}, {600, 300}}</string>
+									<key>HasShadow</key>
+									<false/>
+									<key>Name</key>
+									<string>OSX_BG_Info</string>
+									<key>RefreshInterval</key>
+									<integer>30</integer>
+									<key>SetLocale</key>
+									<true/>
+									<key>SuccessImage</key>
+									<data>
+								TU0AKgAABAj/
+								//8AAAAAAAAA
+								AAAAAAAAAAAA
+								AAAAAAAAAAAN
+								AAAAGgAAACAA
+								AAAaAAAADQAA
+								AAAAAAAAAAAA
+								AAAAAAAAAAAA
+								////AAAAAAAA
+								AAAAAAAAAAAA
+								AAgBAQFYFhUW
+								qygnKOEvLi/9
+								KCco4RYVFqsB
+								AQFYAAAACAAA
+								AAAAAAAAAAAA
+								AP///wAAAAAA
+								AAAAAAAAAAgG
+								AwZ8Pj0+8peY
+								l//S0tP/4+Tl
+								/9LS0/+XmJf/
+								Pj0+8gYDBnwA
+								AAAIAAAAAAAA
+								AAD///8AAAAA
+								AAAAAAUDAQJl
+								LTEt9HqRff+4
+								0Ln/1efT/9jo
+								1f/V59P/uNG5
+								/3qRff8tMS30
+								AwECZQAAAAUA
+								AAAA////AAAA
+								AAAAAAAmEBYQ
+								yz1tP/9Xm03/
+								eLJX/4e6YP+H
+								uWL/h7pg/3ix
+								V/9Wmk3/PWw/
+								/xAWEMsAAAAm
+								AAAAAP///wAA
+								AAAAAAAAThY8
+								Gvc8jjD/TJwb
+								/2CnHf9rryz/
+								bLEv/2ywLP9i
+								qR7/TJ4b/zyQ
+								MP8WPBr3AAAA
+								TQAAAAD///8A
+								AAAAAQAIAGge
+								YRv/VaUq/2Wv
+								IP91uzb/gsZI
+								/4bIS/+DyEj/
+								d743/2exIP9W
+								qSr/HmIb/wAI
+								AGcAAAAB////
+								AAAAAAgADABs
+								J3MY/3C6Nv9/
+								xz3/kNNT/57d
+								Yv+i32f/n99k
+								/5HWVP+AyD3/
+								cr02/yd0GP8A
+								DQBsAAAACf//
+								/wAAAAAMAAYA
+								YydqEPB/yD7/
+								lNhW/6PlZv+x
+								8Xb/uPd8/7P0
+								eP+k6Gf/ldpX
+								/4DLQP8maxDv
+								AAYAYwAAAAv/
+								//8AAAAADwAA
+								AE4XRwXLd8Y5
+								/6foa/+393v/
+								wv6F/8r/i//F
+								/4b/uPt8/6ru
+								bP95yTr/F0kF
+								ygAAAEwAAAAN
+								////AAAAAAwA
+								AAAyAAwAjEB6
+								GOyh7Vz/yP+J
+								/9X/mP/b/5//
+								2P+b/83/i/+m
+								9F3/Qn4X7AEM
+								AIsAAAAzAAAA
+								DP///wAAAAAF
+								AAAAIAAAAF4G
+								FQCpTIQc6ZbZ
+								U/zC+3n/2P+L
+								/8T6fP+a21b8
+								UIkd6AYXAKkA
+								AABcAAAAIAAA
+								AAX///8AAAAA
+								AQAAAA0AAAAz
+								AAAAZwAFAKIa
+								MwTHQGIZ2FV5
+								JuFAYhnZGzQE
+								yAAFAKAAAABn
+								AAAAMgAAAA0A
+								AAAB////AAAA
+								AAAAAAADAAAA
+								EQAAADQAAABd
+								AAAAewAAAI8A
+								AACWAAAAjwAA
+								AHsAAABcAAAA
+								MwAAABEAAAAD
+								AAAAAP///wAA
+								AAAAAAAAAAAA
+								AAMAAAAOAAAA
+								IQAAADYAAABG
+								AAAATAAAAEcA
+								AAA2AAAAIQAA
+								AA0AAAAEAAAA
+								AAAAAAD///8A
+								AAAAAAAAAAAA
+								AAAAAAAAAQAA
+								AAUAAAALAAAA
+								EAAAABMAAAAS
+								AAAADAAAAAUA
+								AAABAAAAAAAA
+								AAAAAAAAAA0B
+								AAADAAAAAQAQ
+								AAABAQADAAAA
+								AQAQAAABAgAD
+								AAAABAAABKoB
+								AwADAAAAAQAB
+								AAABBgADAAAA
+								AQACAAABEQAE
+								AAAAAQAAAAgB
+								EgADAAAAAQAB
+								AAABFQADAAAA
+								AQAEAAABFgAD
+								AAAAAQAQAAAB
+								FwAEAAAAAQAA
+								BAABHAADAAAA
+								AQABAAABUgAD
+								AAAAAQACAAAB
+								UwADAAAABAAA
+								BLIAAAAAAAgA
+								CAAIAAgAAQAB
+								AAEAAQ==
+									</data>
+									<key>TextAlignment</key>
+									<integer>0</integer>
+									<key>TextColor</key>
+									<data>
+								BAtzdHJlYW10
+								eXBlZIHoA4QB
+								QISEhAdOU0Nv
+								bG9yAISECE5T
+								T2JqZWN0AIWE
+								AWMBhARmZmZm
+								AQEBAYY=
+									</data>
+									<key>TextStrikethrough</key>
+									<integer>0</integer>
+									<key>TextUnderline</key>
+									<integer>0</integer>
+								</dict>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>MCXToProfile.6a468ee6-9927-4c93-a70a-7dc822c24e86.alacarte.customsettings.6595189e-b022-4d95-b4d3-f1b5e1bf55fc</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>6595189e-b022-4d95-b4d3-f1b5e1bf55fc</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>org.tynsoe.GeekTool</key>
+				<dict>
+					<key>Set-Once</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>DoNotAskAgainOnClose</key>
+								<true/>
+								<key>SUEnableAutomaticChecks</key>
+								<true/>
+								<key>SULastCheckTime</key>
+								<date>2013-10-30T14:55:34Z</date>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>MCXToProfile.6a468ee6-9927-4c93-a70a-7dc822c24e86.alacarte.customsettings.352b94f4-baae-4321-bd61-c25717a45e7d</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>352b94f4-baae-4321-bd61-c25717a45e7d</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>org.tynsoe.geektool3</key>
+				<dict>
+					<key>Set-Once</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>AutoUpdate</key>
+								<false/>
+								<key>FrameConversionDone</key>
+								<true/>
+								<key>GeekletOrder</key>
+								<array>
+									<string>91AD6DFE-D760-44F1-8190-FA75645E7BC2</string>
+								</array>
+								<key>Groups</key>
+								<array>
+									<dict>
+										<key>GroupContent</key>
+										<array>
+											<string>91AD6DFE-D760-44F1-8190-FA75645E7BC2</string>
+										</array>
+										<key>GroupEnabled</key>
+										<true/>
+										<key>GroupName</key>
+										<string>Default Group</string>
+									</dict>
+								</array>
+								<key>NSNavLastRootDirectory</key>
+								<string>~/Desktop</string>
+								<key>NSWindow Frame NSFontPanel</key>
+								<string>2049 91 445 270 0 0 2560 1418 </string>
+								<key>PropertiesOrigin</key>
+								<string>{250, 610}</string>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>MCXToProfile.6a468ee6-9927-4c93-a70a-7dc822c24e86.alacarte.customsettings.22b6bdc2-175a-4c91-9b43-76dd1bec71c6</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>22b6bdc2-175a-4c91-9b43-76dd1bec71c6</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Included custom settings:
+org.tynsoe.geeklet.shell
+org.tynsoe.GeekTool
+org.tynsoe.geektool3
+
+Git revision: 1d30395cd4</string>
+	<key>PayloadDisplayName</key>
+	<string>BISD-GeekTool</string>
+	<key>PayloadIdentifier</key>
+	<string>BISD-GeekTool</string>
+	<key>PayloadOrganization</key>
+	<string>Birdville ISD</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6a468ee6-9927-4c93-a70a-7dc822c24e86</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

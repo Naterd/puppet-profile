@@ -1,4 +1,4 @@
-class profile::mcx_profile::wifi (
+class profile::profiles::wifi (
   $ssid = 'NONE',
   $password = 'NONE',
   $ensure = 'present'

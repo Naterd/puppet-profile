@@ -19,4 +19,5 @@ class profile::mac_base {
   include profile::munki::munkitools
   include profile::puppet::clean_reports
   include profile::mac_settings::apple_setup_done
+  include profile::profiles::base_profiles
 }
