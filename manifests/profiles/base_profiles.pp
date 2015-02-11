@@ -14,12 +14,13 @@ class profile::profiles::base_profiles (
       system    => true,
     }
 
-    # requires that GeekTools is present. Maybe make a fact to look for GeekTool app...if it exsits then run config.    
-    # config_profile { 'Geektool-login-item':
-    #   ensure    => present,
-    #   path      => "${puppet_path}/Geektool-login-item.mobileconfig",
-    #   system    => true,
-    # }
+    if $geektool_test == 'true' {
+      config_profile { 'Geektool-login-item':
+        ensure    => present,
+        path      => "${puppet_path}/Geektool-login-item.mobileconfig",
+        system    => true,
+      }
+    }
     
     if $mac_laptop == mac_laptop {
       config_profile { 'BISD-Secure_System':
