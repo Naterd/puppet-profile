@@ -19,6 +19,7 @@ class profile::profiles::base_profiles (
         ensure    => present,
         path      => "${puppet_path}/Geektool-login-item.mobileconfig",
         system    => true,
+        require   => Package['Geektool'],
       }
     }
     
