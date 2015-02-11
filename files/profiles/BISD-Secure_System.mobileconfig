@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict><key>PayloadIdentifier</key><string>com.apple.mdm.011-ctemac2.bisd.k12.2d3da6b0-f6e6-0130-a545-002500eedaae.alacarte</string><key>PayloadRemovalDisallowed</key><false/><key>PayloadScope</key><string>System</string><key>PayloadType</key><string>Configuration</string><key>PayloadUUID</key><string>2d3da6b0-f6e6-0130-a545-002500eedaae</string><key>PayloadOrganization</key><string>Birdville ISD</string><key>PayloadVersion</key><integer>1</integer><key>PayloadDisplayName</key><string>BISD-Secure_System</string><key>PayloadContent</key><array><dict><key>PayloadType</key><string>com.apple.wifi.managed</string><key>PayloadVersion</key><integer>1</integer><key>PayloadIdentifier</key><string>com.apple.mdm.011-ctemac2.bisd.k12.2d3da6b0-f6e6-0130-a545-002500eedaae.alacarte.interfaces.57a1e230-f6e6-0130-a547-002500eedaae</string><key>PayloadUUID</key><string>57a1e230-f6e6-0130-a547-002500eedaae</string><key>PayloadEnabled</key><true/><key>PayloadDisplayName</key><string>WiFi (BISD-Secure)</string><key>AutoJoin</key><true/><key>EAPClientConfiguration</key><dict><key>PayloadCertificateAnchorUUID</key><array><string>1FC905F1-D83C-4329-81C0-9F6FE629E302</string><string>A7DB907F-396D-4DCA-8963-2CE24632F3CB</string></array><key>TTLSInnerAuthentication</key><string>MSCHAPv2</string><key>SystemModeCredentialsSource</key><string>ActiveDirectory</string><key>TLSTrustedServerNames</key><array/><key>AcceptEAPTypes</key><array><integer>25</integer><integer>17</integer></array><key>OneTimeUserPassword</key><false/></dict><key>SSID_STR</key><string>BISD-Secure</string><key>AuthenticationMethod</key><string>directory</string><key>Interface</key><string>BuiltInWireless</string><key>HIDDEN_NETWORK</key><false/><key>ProxyType</key><string>None</string><key>EncryptionType</key><string>Any</string><key>SetupModes</key><array><string>System</string><string>Loginwindow</string></array></dict><dict><key>PayloadType</key><string>com.apple.security.root</string><key>PayloadVersion</key><integer>1</integer><key>PayloadIdentifier</key><string>com.apple.mdm.011-ctemac2.bisd.k12.2d3da6b0-f6e6-0130-a545-002500eedaae.alacarte.certificate.569bad03-77fc-476b-a31b-3c7bf9519a42</string><key>PayloadUUID</key><string>569bad03-77fc-476b-a31b-3c7bf9519a42</string><key>PayloadEnabled</key><true/><key>PayloadDisplayName</key><string>bisdacs1</string><key>data_files</key><array><integer>5</integer></array><key>PayloadContent</key><data>MIIB5jCCAU+gAwIBAgIFAJv9fCIwDQYJKoZIhvcNAQEFBQAwNzEQMA4GA1UE
+ChMHVW5rbm93bjEQMA4GA1UECxMHVW5rbm93bjERMA8GA1UEAxMIYmlzZGFj
+czEwHhcNMTMwNjI0MjAwMTMzWhcNMTkwNzIyMTcxMzAzWjA3MRAwDgYDVQQK
+EwdVbmtub3duMRAwDgYDVQQLEwdVbmtub3duMREwDwYDVQQDEwhiaXNkYWNz
+MTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA0CU7ZiNAitP8Nv2/B4d1
+4z8Ew3VIdYD5FgUFXODwrQJgT2UfgbDRfWVne55a6aXLnPQRLxKmWn44FKjC
+feBIWHu0GOtN8TU+4XyJr4tKPt+YwM3miS0lpC285byVrrCUHdD0G6X1x4cg
+Yyv6JX9CdRU87tMWd9Zl19Al40S7rk0CAwEAATANBgkqhkiG9w0BAQUFAAOB
+gQBmSfdLprWsJVB0QDb/RI6O8fxP2LvmgM4zIcZIcdNh5payQ9H11rPuW0Et
+nP3Cpac4IpFupJf8wFjyZrmmX25ZSDNM2piZE+Ls/F0N+Oa6TZm5O6tPky8n
+GG0pRfLftkTfwlx2dQU3KHjWHgj/cJ2weo/pMvh5rHlNXeB8qnT+bA==
+</data><key>PayloadCertificateFileName</key><string>bisdacs1</string></dict><dict><key>PayloadType</key><string>com.apple.security.root</string><key>PayloadVersion</key><integer>1</integer><key>PayloadIdentifier</key><string>com.apple.mdm.011-ctemac2.bisd.k12.2d3da6b0-f6e6-0130-a545-002500eedaae.alacarte.certificate.0c193fa9-1b21-4c4f-8137-8b282a9144ce</string><key>PayloadUUID</key><string>0c193fa9-1b21-4c4f-8137-8b282a9144ce</string><key>PayloadEnabled</key><true/><key>PayloadDisplayName</key><string>bisdacs2</string><key>data_files</key><array><integer>6</integer></array><key>PayloadContent</key><data>MIIB5jCCAU+gAwIBAgIFAJwgbDwwDQYJKoZIhvcNAQEFBQAwNzEQMA4GA1UE
+ChMHVW5rbm93bjEQMA4GA1UECxMHVW5rbm93bjERMA8GA1UEAxMIYmlzZGFj
+czIwHhcNMTMwNzA4MTcyOTEwWhcNMTkwNzIyMTcxMzE3WjA3MRAwDgYDVQQK
+EwdVbmtub3duMRAwDgYDVQQLEwdVbmtub3duMREwDwYDVQQDEwhiaXNkYWNz
+MjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA5+q2Mh1m4VdhlZ63tXlU
+HQsTLvuOUyxNVkbHjpuFZmOZyDkIL9wIb2A85IFy2+15pv/xwp1FX1wiokUB
+Q9PRb5KSOQsZmNJtomvVqw3dDnuZ9DDK26QMsgp/PPV9mohNLKKb0VY8h3pZ
+Cty4d3vhofC9AIXBH0708oOsNgexdjcCAwEAATANBgkqhkiG9w0BAQUFAAOB
+gQBePUXZZ9n0uuBu+rlJjPuae1YzzmgHomBjrqEEDm79iaQXJiTSyJAWTE1c
+nXtIH0xbDegNf2bJNUna2Me+hSOoy9ddBJ4lnNupahnanybrfoywMvIPgqZw
+k5kT6w4u4hNVIpCuqAR8byldHscSaEZiMLwQpuAVOIoI4gAInhqsZw==
+</data><key>PayloadCertificateFileName</key><string>bisdacs2</string></dict></array></dict></plist>
