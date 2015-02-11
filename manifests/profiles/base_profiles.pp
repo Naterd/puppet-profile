@@ -4,9 +4,10 @@ class profile::profiles::base_profiles (
     
 ) {
     
-    
     # ensure profiles are either absent or present
     # the name needs to be the exact same as the PayloadIdentifier (case senitive)
+    
+    
     config_profile { 'BISD-GeekTool':
       ensure    => present,
       path      => "${puppet_path}/BISD-GeekTool.mobileconfig",
@@ -21,7 +22,7 @@ class profile::profiles::base_profiles (
     # }
     
     if $mac_laptop == mac_laptop {
-      config_profile { 'BISD-GeekTool':
+      config_profile { 'BISD-Secure_System':
         ensure    => present,
         path      => "${puppet_path}/BISD-Secure_System.mobileconfig",
         system    => true,
