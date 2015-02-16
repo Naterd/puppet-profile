@@ -1,3 +1,0 @@
-[submodule "files/munki-conditions"]
-	path = files/munki-conditions
-	url = https://github.com/timsutton/munki-conditions.git
