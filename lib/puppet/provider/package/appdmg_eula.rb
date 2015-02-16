@@ -49,7 +49,7 @@ Puppet::Type.type(:package).provide(:appdmg_eula, :parent => Puppet::Provider::P
     appname = File.basename(source);
     target = "/Applications/#{appname}"
     ditto "--rsrc", source, "#{target}"
-    chown "-R", "root:staff", "#{target}"
+    chown "-R", "root:admin", "#{target}"
     File.open("/var/db/.puppet_appdmg_installed_#{name}", "w") do |t|
       t.print "name: '#{name}'\n"
       t.print "source: '#{orig_source}'\n"
