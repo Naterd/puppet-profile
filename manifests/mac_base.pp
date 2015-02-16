@@ -21,4 +21,5 @@ class profile::mac_base {
   include profile::mac_settings::apple_setup_done
   include profile::profiles::base_profiles
   include profile::mac_apps::geektool
+  include profile::mac_apps::vmware_tools
 }
