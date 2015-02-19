@@ -12,14 +12,12 @@ class profile::mac_base {
   else {
     include managedmac
   }
-  
 
   include desktoppicture
   include outset
-  include profile::munki::munkitools
-  include profile::puppet::clean_reports
-  include profile::mac_settings::apple_setup_done
-  include profile::profiles::base_profiles
-  include profile::mac_apps::geektool
-  include profile::mac_apps::vmware_tools
+  include profile::munki
+  include profile::puppet
+  include profile::mac_settings
+  include profile::profiles
+  include profile::mac_apps
 }
