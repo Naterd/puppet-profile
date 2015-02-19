@@ -22,5 +22,5 @@ class profile::mac_base {
   include profile::munki::munkitools
   include profile::profiles::base_profiles
   include profile::puppet::clean_reports
-  include class profile::puppet::pluginsync
+  include profile::puppet::pluginsync
 }
