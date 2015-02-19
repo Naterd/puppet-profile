@@ -15,9 +15,12 @@ class profile::mac_base {
 
   include desktoppicture
   include outset
-  include profile::munki
-  include profile::puppet
-  include profile::mac_settings
-  include profile::profiles
-  include profile::mac_apps
+  include profile::mac_apps::geektool
+  include profile::mac_apps::vmware_tools
+  include profile::mac_settings::apple_setup_done
+  include profile::mac_settings::disable_diagnostic_msg
+  include profile::munki::munkitools
+  include profile::profiles::base_profiles
+  include profile::puppet::clean_reports
+  include class profile::puppet::pluginsync
 }
