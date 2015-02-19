@@ -8,8 +8,8 @@ class profile::mac_settings::disable_diagnostic_msg {
       #notice('This operating system does not need the DiagnosticMessagesHistory file.')
     }
     else {
-      file {"/Library/Application\ Support/CrashReporter/DiagnosticMessagesHistory.plist":
-        replace => "no"
+      file {"/Library/Application Support/CrashReporter/DiagnosticMessagesHistory.plist":
+        replace => "no",
         source  => $DiaMsg,
         owner   => root,
         group   => admin,
