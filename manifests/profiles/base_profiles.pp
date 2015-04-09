@@ -5,7 +5,7 @@ class profile::profiles::base_profiles (
 ) {
     
     # ensure profiles are either absent or present
-    # the name needs to be the exact same as the PayloadIdentifier (case senitive)
+    # the name needs to be the exact same as the PayloadIdentifier (case sensitive)
     
     
     config_profile { 'BISD-GeekTool':
