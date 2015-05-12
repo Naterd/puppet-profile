@@ -36,7 +36,7 @@ Puppet::Type.type(:package).provide :compressed_pkg,
   end
 
   def self.install_compressed_pkg(name, source, flavor = nil)
-    FileUtils.mkdir_p '/opt/boxen/cache'
+    FileUtils.mkdir_p '/private/etc/puppet/app_cache'
     source_type = case
                   when flavor
                     flavor
@@ -55,15 +55,15 @@ Puppet::Type.type(:package).provide :compressed_pkg,
                   end
 
 
-    execute "curl '#{source}' -L -q -o '/opt/boxen/cache/#{name}.pkg.#{source_type}'"
+    execute "curl '#{source}' -L -q -o '/private/etc/puppet/app_cache/#{name}.pkg.#{source_type}'"
 
-    tmpdir = "/opt/boxen/cache/#{name}"
+    tmpdir = "/private/etc/puppet/app_cache/#{name}"
     case source_type
     when 'zip'
       execute [
         "/usr/bin/unzip",
         "-o",
-        "'/opt/boxen/cache/#{name}.pkg.#{source_type}'",
+        "'/private/etc/puppet/app_cache/#{name}.pkg.#{source_type}'",
         "-d",
         tmpdir
       ].join(' '), :uid => 'root'
@@ -71,7 +71,7 @@ Puppet::Type.type(:package).provide :compressed_pkg,
       execute [
         "/usr/bin/tar",
         "-zxf",
-        "'/opt/boxen/cache/#{name}.pkg.#{source_type}'",
+        "'/private/etc/puppet/app_cache/#{name}.pkg.#{source_type}'",
         "-C",
         tmpdir
       ].join(' '), :uid => 'root'
@@ -79,7 +79,7 @@ Puppet::Type.type(:package).provide :compressed_pkg,
       execute [
         "/usr/bin/tar",
         "-jxf",
-        "'/opt/boxen/cache/#{name}.pkg.#{source_type}'",
+        "'/private/etc/puppet/app_cache/#{name}.pkg.#{source_type}'",
         "-C",
         tmpdir
       ].join(' '), :uid => 'root'

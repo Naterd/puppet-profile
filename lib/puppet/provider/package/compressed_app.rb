@@ -45,7 +45,7 @@ Puppet::Type.type(:package).provide :compressed_app,
     fail("OS X compressed apps must specify a package source") unless @resource[:source]
     fail("Unknown flavor #{flavor}") unless FLAVORS.include?(flavor)
 
-    FileUtils.mkdir_p '/opt/boxen/cache'
+    FileUtils.mkdir_p '/private/etc/puppet/app_cache'
     curl @resource[:source], "-Lqo", cached_path
     rm "-rf", app_path
 
@@ -84,7 +84,7 @@ private
   end
 
   def cached_path
-    "/opt/boxen/cache/#{@resource[:name]}.app.#{flavor}"
+    "/private/etc/puppet/app_cache/#{@resource[:name]}.app.#{flavor}"
   end
 
   def receipt_path
