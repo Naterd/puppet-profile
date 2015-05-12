@@ -15,6 +15,7 @@ class profile::mac_base {
 
   include desktoppicture
   include outset
+  include profile::mac_apps::beamoff
   include profile::mac_apps::geektool
   include profile::mac_apps::vmware_tools
   include profile::mac_settings::apple_setup_done
