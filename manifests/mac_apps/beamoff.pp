@@ -1,6 +1,6 @@
 # Install Beamoff from the internet
 class profile::mac_apps::beamoff {
-  $Agent = 'puppet:///modules/k12.bisd.launch_beamoff.plist'
+  $Agent = 'puppet:///modules/profile/k12.bisd.launch_beamoff.plist'
   $min_os_version = '10.10'
 
   if $virtual == 'vmware' {
