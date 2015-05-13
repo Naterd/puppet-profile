@@ -27,7 +27,7 @@ class profile::munki::munkitools(
     provider => pkgdmg,
     alias    => 'munkitools',
     ensure   => installed,
-    source   => 'https://github.com/munki/munki/releases/download/v2.2.0.2399/munkitools-2.2.0.2399.pkg',
+    source   => 'https://github.com/munki/munki/releases/download/v2.2.4/munkitools-2.2.4.2431.pkg',
   #  notify   => Exec["/sbin/reboot"],
   }
   
