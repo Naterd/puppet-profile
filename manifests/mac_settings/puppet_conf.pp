@@ -1,6 +1,6 @@
 class profile::mac_settings::puppet_conf {
   
-  if $::hostname == *"test"* {
+  if $::hostname =~ /test/ {
     $testConf = 'puppet:///modules/profile/puppetconf/puppet_test.conf'
     file {"/private/etc/puppet/puppet.conf":
       source  => $testConf,
