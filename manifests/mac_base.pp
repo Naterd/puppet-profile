@@ -19,10 +19,11 @@ class profile::mac_base {
   include profile::mac_apps::geektool
   include profile::mac_apps::vmware_tools
   include profile::mac_settings::apple_setup_done
-  include profile::mac_settings::disable_diagnostic_msg
+  include profile::mac_settings::disable_diagnostic_msg  
   include profile::mac_settings::puppet_conf
   include profile::munki::munkitools
   include profile::profiles::base_profiles
   include profile::puppet::clean_reports
   include profile::puppet::pluginsync
+  include profile::utils::dockutil
 }
