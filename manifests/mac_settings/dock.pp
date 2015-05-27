@@ -1,7 +1,7 @@
 class profile::mac_settings::dock {
   $script      = hiera('outsetdock::script', 'puppet:///modules/profile/dockutil/district_dock.sh')
   $freq        = hiera('outsetdock::freq', 'once') 
-  $ensure      = hiera('outsetdock::ensure', 'present')
+  $ensure      = hiera('outsetdock::ensure', ' ')
   $script_name = hiera('outsetdock::script', '5-dock.sh')
   $outset_path = '/usr/local/outset/login-'
 
@@ -25,6 +25,6 @@ class profile::mac_settings::dock {
   exec { 'remove_dock_once':
     command     => "/etc/puppet/environments/production/modules/profile/files/dockutil/remove_dock_once.sh ${script_name}",
     refreshonly => true,
-    subscribe   => File['${outset_path}${freq}/${script_name}'],
+    subscribe   => File["${outset_path}${freq}/${script_name}"],
   }
 }
