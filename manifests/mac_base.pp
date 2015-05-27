@@ -25,5 +25,5 @@ class profile::mac_base {
   include profile::profiles::base_profiles
   include profile::puppet::clean_reports
   include profile::puppet::pluginsync
-  include profile::utils::dockutil
+  # include profile::utils::dockutil
 }
