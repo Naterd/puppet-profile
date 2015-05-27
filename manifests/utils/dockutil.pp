@@ -1,4 +1,5 @@
 class profile::utils::dockutil {
+  include profile::mac_settings::dock
   $dockutil = 'puppet:///modules/profile/dockutil/dockutil'
 
   file {'/usr/local/bin/dockutil':

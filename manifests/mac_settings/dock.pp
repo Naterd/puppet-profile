@@ -12,7 +12,7 @@ class profile::mac_settings::dock {
       owner   => root,
       group   => wheel,
       mode    => '0755',
-      notify => Exec["remove_dock_once"],
+      # notify => Exec["remove_dock_once"],
     }
   }
   
@@ -25,5 +25,6 @@ class profile::mac_settings::dock {
   exec { 'remove_dock_once':
     command     => "/etc/puppet/environments/production/modules/profile/files/dockutil/remove_dock_once.sh ${script_name}",
     refreshonly => true,
+    subscribe   => File['${outset_path}${freq}/${script_name}'],
   }
 }
