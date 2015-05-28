@@ -7,7 +7,7 @@ class profile::mac_settings::dock {
 
   if $ensure == 'present' {
     file {"${outset_path}${freq}/${script_name}":
-      ensure => absent,
+      ensure => present,
       source  => $script,
       owner   => root,
       group   => wheel,
