@@ -21,12 +21,13 @@ class profile::mac_apps::beamoff {
         group   => wheel,
         mode    => '0664',
       }
-
-      service { $daemon :
-        ensure    => running,
-        enable    => true,
-        subscribe => File[ $daemon ],
-      }
+      
+      # Not Working atm 
+      # service { $daemon :
+      #   ensure    => running,
+      #   enable    => true,
+      #   subscribe => File[ $daemon ],
+      # }
     }
   }    
 }
