@@ -12,7 +12,7 @@ class profile::mac_settings::googlechrome {
     owner   => root,
     group   => wheel,
     mode    => '0644',
-    require => File[ '$chrome_dirs' ],
+    require => File[ $chrome_dirs ],
   }
   
   file {"${outset_path}every/7-ChromePref.sh":
