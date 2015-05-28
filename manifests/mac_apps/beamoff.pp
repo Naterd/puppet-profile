@@ -1,6 +1,6 @@
 # Install Beamoff from the internet
 class profile::mac_apps::beamoff {
-  $Agent = 'puppet:///modules/profile/k12.bisd.launch_beamoff.plist'
+  $Agent = 'puppet:///modules/profile/beamoff/k12.bisd.launch_beamoff.plist'
   $min_os_version = '10.10'
 
   if $virtual == 'vmware' {
@@ -18,6 +18,12 @@ class profile::mac_apps::beamoff {
         owner   => root,
         group   => wheel,
         mode    => '0664',
+      }
+
+      service {'k12.bisd.launch_beamoff.plist':
+        ensure    => running,
+        enable    => true,
+        subscribe => File["/Library/LaunchAgents/k12.bisd.launch_beamoff.plist"],
       }
     }
   }    
