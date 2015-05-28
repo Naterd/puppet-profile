@@ -27,6 +27,6 @@ class profile::mac_settings::googlechrome {
       ensure => "directory",
       owner  => "root",
       group  => "wheel",
-      mode   => 750,
+      mode   => 664,
   }
 }
