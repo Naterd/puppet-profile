@@ -2,7 +2,7 @@ class profile::mac_settings::dock {
   $script      = hiera('outsetdock::script', 'puppet:///modules/profile/dockutil/district_dock.sh')
   $freq        = hiera('outsetdock::freq', 'once') 
   $ensure      = hiera('outsetdock::ensure', 'present')
-  $script_name = hiera('outsetdock::script', '5-dock.sh')
+  $script_name = hiera('outsetdock::script_name', '5-dock.sh')
   $outset_path = '/usr/local/outset/login-'
   $dockutil = 'puppet:///modules/profile/dockutil/dockutil'
 
