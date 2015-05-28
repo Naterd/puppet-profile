@@ -12,18 +12,20 @@ class profile::mac_apps::beamoff {
         source   => "http://cburlison.s3.amazonaws.com/public/beamoff.zip",
         provider => 'compressed_app',
       }
-    
-      file {"/Library/LaunchAgents/k12.bisd.launch_beamoff.plist":
+      
+      $daemon = "/Library/LaunchAgents/k12.bisd.launch_beamoff.plist"
+      
+      file { $daemon :
         source  => $Agent,
         owner   => root,
         group   => wheel,
         mode    => '0664',
       }
 
-      service {'k12.bisd.launch_beamoff.plist':
+      service { $daemon :
         ensure    => running,
         enable    => true,
-        subscribe => File["/Library/LaunchAgents/k12.bisd.launch_beamoff.plist"],
+        subscribe => File[ $daemon ],
       }
     }
   }    
