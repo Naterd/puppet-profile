@@ -1,10 +1,7 @@
 #!/bin/sh
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/libexec export PATH
 
 # Audio Video Dock
-osversionlong=`sw_vers -productVersion`
-osvers=${osversionlong:3:1}
-dockutil=/usr/local/bin/dockutil
-
 dockutil --remove all --no-restart
 sleep 2
 dockutil --add /Applications/Launchpad.app --no-restart

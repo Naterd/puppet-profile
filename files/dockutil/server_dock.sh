@@ -1,11 +1,7 @@
 #!/bin/sh
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/libexec export PATH
 
 # server dock
-osversionlong=`sw_vers -productVersion`
-osvers=${osversionlong:3:1}
-dockutil=/usr/local/bin/dockutil
-
-
 dockutil --remove all --no-restart
 sleep 2
 dockutil --add /Applications/Mission\ Control.app --no-restart
