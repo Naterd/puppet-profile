@@ -15,6 +15,6 @@ PREFS_TGT_FILE="$PREFS_TGT_DIR/Preferences"
 touch "$PREFS_TGT_DIR/../First Run"
 
 # fix preferences
-chown -R $CURRENT_USER:admin ${PREFS_TGT_DIR}
-chmod 600 $PREFS_TGT_FILE
+chown -R $CURRENT_USER:admin "$PREFS_TGT_DIR"
+chmod 600 "$PREFS_TGT_FILE"
 chmod 640 "$PREFS_TGT_DIR/../First Run"
