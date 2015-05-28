@@ -1,7 +1,7 @@
 class profile::mac_settings::dock {
   $script      = hiera('outsetdock::script', 'puppet:///modules/profile/dockutil/district_dock.sh')
   $freq        = hiera('outsetdock::freq', 'once') 
-  $ensure      = hiera('outsetdock::ensure', ' ')
+  $ensure      = hiera('outsetdock::ensure', 'present')
   $script_name = hiera('outsetdock::script', '5-dock.sh')
   $outset_path = '/usr/local/outset/login-'
 
@@ -12,7 +12,7 @@ class profile::mac_settings::dock {
       owner   => root,
       group   => wheel,
       mode    => '0755',
-      # notify => Exec["remove_dock_once"],
+      notify => Exec["remove_dock_once"],
     }
   }
   
@@ -26,5 +26,9 @@ class profile::mac_settings::dock {
     command     => "/etc/puppet/environments/production/modules/profile/files/dockutil/remove_dock_once.sh ${script_name}",
     refreshonly => true,
     subscribe   => File["${outset_path}${freq}/${script_name}"],
+  }
+  
+  if $ensure != 'present' and $ensure !='absent'{
+      fail('Invalid value for ensure.')
   }
 }
