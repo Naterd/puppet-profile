@@ -20,6 +20,6 @@ dockutil --add /Applications/Utilities/Activity\ Monitor.app --no-restart
 dockutil --add /Applications/Managed\ Software\ Center.app --no-restart
 dockutil --add /Applications/System\ Preferences.app --no-restart
 
-dockutil --add '/Applications' --view grid --display folder --sort name --no-restart
-dockutil --add '~/Documents' --view grid --display folder --sort name --no-restart
-dockutil --add '~/Downloads' --view grid --display folder --sort dateadded
+dockutil --add '/Applications' --view automatic --display folder --sort name --no-restart
+dockutil --add '~/Documents' --view automatic --display folder --sort name --no-restart
+dockutil --add '~/Downloads' --view automatic --display folder --sort dateadded

@@ -20,10 +20,6 @@ if [ -d "/Applications/Calendar.app" ]; then
   dockutil --add /Applications/Calendar.app --no-restart
 fi
 
-if [ -d "/Applications/iCal.app" ]; then
-  dockutil --add /Applications/iCal.app --no-restart
-fi
-
 dockutil --add /Applications/GarageBand.app --no-restart
 dockutil --add /Applications/iPhoto.app --no-restart
 dockutil --add /Applications/Celtx.app --no-restart
@@ -41,14 +37,11 @@ if [ -d "/Applications/Pages.app" ]; then
   dockutil --add /Applications/Pages.app  --no-restart
 fi
 
-
-dockutil --add /Applications/App\ Store.app --no-restart
 dockutil --add /Applications/Managed\ Software\ Center.app --no-restart
 dockutil --add /Applications/System\ Preferences.app --no-restart
 
-dockutil --add '/Applications' --view grid --display folder --no-restart --sort name
-dockutil --add '~/Documents' --view grid --display folder --no-restart --sort name
-dockutil --add '~/Downloads' --view grid --display folder --no-restart --sort dateadded
-dockutil --add smb://011-ctemac2 --label '011-ctemac2' --no-restart
+dockutil --add '/Applications' --view automatic --display folder --no-restart --sort name
+dockutil --add '~/Documents' --view automatic --display folder --no-restart --sort name
+dockutil --add '~/Downloads' --view automatic --display folder --no-restart --sort dateadded
 dockutil --add smb://studiob:bisdtv@011-ctemac2/Upchurch --label 'Upchurch' --no-restart
 dockutil --add smb://studiob:bisdtv@011-ctemac2/Kasal --label 'Kasal'
