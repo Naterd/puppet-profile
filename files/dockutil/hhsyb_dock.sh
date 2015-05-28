@@ -10,7 +10,7 @@ dockutil --remove all --no-restart
 sleep 2
 dockutil --add /Applications/Dictionary.app --no-restart
 dockutil --add /Applications/App\ Store.app --no-restart
-dockutil --add /Applications/Chrome.app --no-restart
+dockutil --add /Applications/Google\ Chrome.app --no-restart
 dockutil --add /Applications/Safari.app --no-restart
 dockutil --add /Applications/Launchpad.app --no-restart
 dockutil --add /Applications/Mission\ Control.app --no-restart
