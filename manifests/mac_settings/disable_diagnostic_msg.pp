@@ -1,7 +1,7 @@
 # This file is only needed on Yosemite. It will disable the 
 # Diagnostic Window when first logging in as an administrator.
 class profile::mac_settings::disable_diagnostic_msg {
-  $DiaMsg = 'puppet:///modules/profile/DiagnosticMessagesHistory.plist'
+  $DiaMsg = 'puppet:///modules/profile/DiagnosticMessages/DiagnosticMessagesHistory.plist'
   $min_os_version = '10.10'
 
     if version_compare($::macosx_productversion_major, $min_os_version) < 0 {
