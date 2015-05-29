@@ -4,8 +4,10 @@ class profile::mac_settings::dock {
   $ensure      = hiera('outsetdock::ensure', 'present')
   $script_name = hiera('outsetdock::script_name', '5-dock.sh')
   $outset_path = '/usr/local/outset/login-'
-  $dockutil = 'puppet:///modules/profile/dockutil/dockutil'
-
+  # $dockutil = 'puppet:///modules/profile/dockutil/dockutil'
+  
+  include profile::utils::dockutil
+  
   if $ensure == 'present' {
     file {"${outset_path}${freq}/${script_name}":
       ensure => present,
@@ -33,11 +35,11 @@ class profile::mac_settings::dock {
       fail('Invalid value for ensure.')
   }
 
-  file {'/usr/local/bin/dockutil':
-    owner  => root,
-    group  => admin,
-    mode   => '0755',
-    source  => $dockutil,
-    ensure => 'present',
-  }
+  # file {'/usr/local/bin/dockutil':
+  #   owner  => root,
+  #   group  => admin,
+  #   mode   => '0755',
+  #   source  => $dockutil,
+  #   ensure => 'present',
+  # }
 }
