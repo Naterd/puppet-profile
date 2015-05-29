@@ -1,5 +1,5 @@
 class profile::utils::dockutil{
-  $dockutil = 'puppet:///modules/profile/dockutil/dockutil',
+  $dockutil = 'puppet:///modules/profile/dockutil/dockutil'
   
   file {'/usr/local/bin/dockutil':
     owner  => root,
