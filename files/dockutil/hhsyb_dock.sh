@@ -26,8 +26,8 @@ dockutil --add /Applications/iTunes.app --no-restart
 dockutil --add /Applications/Managed\ Software\ Center.app --no-restart
 dockutil --add /Applications/System\ Preferences.app --no-restart
 
-dockutil --add '/Applications' --view automatic --display folder --sort name --no-restart
-dockutil --add '~/Documents' --view automatic --display folder --sort name --no-restart 
-dockutil --add '~/Downloads' --view automatic --display folder --sort dateadded --no-restart
+dockutil --add '/Applications' --display folder --sort name --no-restart
+dockutil --add '~/Documents' --display folder --sort name --no-restart 
+dockutil --add '~/Downloads' --display folder --sort dateadded --no-restart
 dockutil --add smb://hhsphoto:buffalo@011-ctemac2/hhs_arnold --label 'hhs_arnold' --no-restart
 dockutil --add smb://hhsyb@011-ctemac2/hhs_yearbook --label 'hhs_yearbook'

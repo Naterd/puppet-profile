@@ -40,8 +40,8 @@ fi
 dockutil --add /Applications/Managed\ Software\ Center.app --no-restart
 dockutil --add /Applications/System\ Preferences.app --no-restart
 
-dockutil --add '/Applications' --view automatic --display folder --no-restart --sort name
-dockutil --add '~/Documents' --view automatic --display folder --no-restart --sort name
-dockutil --add '~/Downloads' --view automatic --display folder --no-restart --sort dateadded
+dockutil --add '/Applications' --display folder --no-restart --sort name
+dockutil --add '~/Documents' --display folder --no-restart --sort name
+dockutil --add '~/Downloads' --display folder --no-restart --sort dateadded
 dockutil --add smb://studiob:bisdtv@011-ctemac2/Upchurch --label 'Upchurch' --no-restart
 dockutil --add smb://studiob:bisdtv@011-ctemac2/Kasal --label 'Kasal'
