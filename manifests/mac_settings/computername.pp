@@ -2,9 +2,9 @@ class profile::mac_settings::computername {
 # This class will verify that the computer name and asset tag are set properly.
 # The csv file has data based off the serial number.
   
-  $checkscript = 'puppet:///modules/profile/name_mac/installcheck_script.py'
-  $postscript = 'puppet:///modules/profile/name_mac/postinstall_script.py'
-  $csv = 'puppet:///modules/profile/name_mac/names.csv'
+  $checkscript = '/etc/puppet/environments/production/modules/profile/files/name_mac/installcheck_script.py'
+  $postscript = '/etc/puppet/environments/production/modules/profile/files/name_mac/postinstall_script.py'
+  $csv = '/etc/puppet/environments/production/modules/profile/files/name_mac/names.csv'
   
   exec { "set_compname":
       command => $postscript,
