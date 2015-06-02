@@ -2,6 +2,7 @@
 class profile::mac_settings::cleanup_mgt_files {
   file { "/usr/local/profiles":
     ensure => absent,
+    force  => true,
   }
   
   file { "/usr/local/outset/login-once/bisd_audiovideo_desktop.sh":
