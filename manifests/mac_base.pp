@@ -26,7 +26,6 @@ class profile::mac_base {
   include profile::mac_settings::dock
   include profile::mac_settings::googlechrome
   include profile::mac_settings::puppet_conf
-  include profile::mac_settings::remove_profiles
   include profile::munki::munkitools
   include profile::profiles::base_profiles
   include profile::puppet::clean_reports
