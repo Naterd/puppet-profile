@@ -1,20 +1,34 @@
 class profile::mac_settings::computername {
-
-  if $::mac_current_user == "root" {
-    notice ("root account")
+# This class will verify that the computer name and asset tag are set properly.
+# The csv file has data based off the serial number.
+  
+  $checkscript = 'puppet:///modules/profile/name_mac/installcheck_script.py'
+  $postscript = 'puppet:///modules/profile/name_mac/postinstall_script.py'
+  $csv = 'puppet:///modules/profile/name_mac/names.csv'
+  
+  exec { "set_compname":
+      command => $postscript,
+      onlyif  => $checkscript,
+      require => File["/usr/local/name_mac/names.csv"],
   }
-  else {
-    exec {"setcomputername":
-      command => "/usr/sbin/systemsetup -setcomputername $mac_current_user.$sp_serial_number",
-      unless  => "/usr/sbin/systemsetup -getcomputername | grep $mac_current_user ",
+  
+  if ! defined(File['/usr/local']) {
+    file { '/usr/local':
+      ensure => directory,
     }
-    exec {"sethostname":
-      command => "/usr/sbin/scutil --set HostName $mac_current_user.$sp_serial_number",
-      unless  => "/usr/sbin/scutil --get HostName | grep $mac_current_user.$sp_serial_number",
+  }
+
+  if ! defined(File['/usr/local/name_mac']) {
+    file { '/usr/local/name_mac':
+      ensure => directory,
     }
-    exec {"setlocalhostname":
-      command => "/usr/sbin/systemsetup -setlocalsubnetname $sp_serial_number",
-      unless  => "/usr/sbin/systemsetup -getlocalsubnetname | grep $sp_serial_number",
-    }
+  }
+
+  file {"/usr/local/name_mac/names.csv":
+    ensure => present,
+    source  => $csv,
+    owner   => root,
+    group   => wheel,
+    mode    => '0600',
   }
 }
