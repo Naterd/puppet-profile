@@ -31,8 +31,6 @@ def check_compname(serial_number, computername):
             serial = row['serial']
             if serial == serial_number:
                 if row['name'] != computername:
-                    sys.exit(1)
-                else:
                     sys.exit(0)
 
 def check_asset(serial_number, asset_tag):
@@ -42,9 +40,9 @@ def check_asset(serial_number, asset_tag):
             serial = row['serial']
             if serial == serial_number:
                 if row['asset'] != asset_tag:
-                    sys.exit(1)
-                else:
                     sys.exit(0)
+                else:
+                    sys.exit(1)
 
 def get_serial_number():
     hardware_info = get_hardware_info()
