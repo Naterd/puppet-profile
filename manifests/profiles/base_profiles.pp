@@ -24,11 +24,11 @@ class profile::profiles::base_profiles (
       }
     }
     
-    if $mac_laptop == mac_laptop {
-      config_profile { 'BISD-Secure_System':
-        ensure    => present,
-        path      => "${puppet_path}/BISD-Secure_System.mobileconfig",
-        system    => true,
-      }
-    }
+    # if $mac_laptop == mac_laptop {
+    #   config_profile { 'BISD-Secure_System':
+    #     ensure    => present,
+    #     path      => "${puppet_path}/BISD-Secure_System.mobileconfig",
+    #     system    => true,
+    #   }
+    # }
 }
