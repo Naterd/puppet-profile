@@ -24,7 +24,7 @@ class profile::mac_base {
   include profile::mac_settings::computername
   include profile::mac_settings::disable_diagnostic_msg
   include profile::mac_settings::dock
-  include profile::mac_settings::finder_pref
+  include profile::mac_settings::finder_prefs
   include profile::mac_settings::googlechrome
   include profile::mac_settings::puppet_conf
   include profile::munki::munkitools
