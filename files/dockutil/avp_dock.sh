@@ -1,6 +1,6 @@
 #!/bin/sh
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/libexec export PATH
-
+ 
 # Audio Video Dock
 dockutil --remove all --no-restart
 sleep 2
