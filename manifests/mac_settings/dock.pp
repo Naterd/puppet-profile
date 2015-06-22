@@ -25,7 +25,7 @@ class profile::mac_settings::dock {
   }
 
   exec { 'remove_dock_once':
-    command     => "/etc/puppet/environments/production/modules/profile/files/dockutil/remove_dock_once.sh ${script_name}",
+    command     => "/etc/puppet/environments/production/modules/profile/files/dockutil/remove_once.sh ${script_name}",
     refreshonly => true,
   }
   
