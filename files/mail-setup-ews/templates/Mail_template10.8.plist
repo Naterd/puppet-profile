@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AccountsVersion</key>
+	<integer>1</integer>
+	<key>MailAccounts</key>
+	<array>
+		<dict>
+			<key>AccountPath</key>
+			<string>~/Library/Mail/V2/Mailboxes</string>
+			<key>AccountType</key>
+			<string>LocalAccount</string>
+			<key>ConfigureDynamically</key>
+			<false/>
+			<key>IsSyncable</key>
+			<true/>
+			<key>uniqueId</key>
+			<string>LocalAccountId</string>
+		</dict>
+		<dict>
+			<key>AccountName</key>
+			<string>BISD</string>
+			<key>AccountType</key>
+			<string>EWSAccount</string>
+			<key>ConfigureDynamically</key>
+			<false/>
+			<key>EmailAddresses</key>
+			<array/>
+			<key>ExternalPortNumber</key>
+			<integer>443</integer>
+			<key>ExternalServerPath</key>
+			<string>EWS/Exchange.asmx</string>
+			<key>FullUserName</key>
+			<string></string>
+			<key>Hostname</key>
+			<string>exchange.birdvilleschools.net</string>
+			<key>PortNumber</key>
+			<string>443</string>
+			<key>RootFolderId</key>
+			<string></string>
+			<key>SMTPIdentifier</key>
+			<string>EWSDelivery</string>
+			<key>SSLEnabled</key>
+			<string>YES</string>
+			<key>StoreDraftsOnServer</key>
+			<string>YES</string>
+			<key>StoreSentMessagesOnServer</key>
+			<string>YES</string>
+			<key>Username</key>
+			<string></string>
+			<key>uniqueId</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>
