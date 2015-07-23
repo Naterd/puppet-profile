@@ -42,7 +42,7 @@ elif [ ${INSTALL_METHOD} == "2" ]; then
 	unzip "${VMWARE_TOOLS_ZIP_FILE}"
 
 	# Mount VMware Tools ISO (similiar to vSphere/ESXi)
-	hdiutil attach "${VMWARE_TOOLS_ISO_FILE}"
+	hdiutil attach -nobrowse "${VMWARE_TOOLS_ISO_FILE}"
 
 	# Perform installation
 	/usr/sbin/installer -pkg "${VMWARE_TOOLS_INSTALLER_DIR}/${VMWARE_TOOLS_INSTALLER_FILE}" -target /
