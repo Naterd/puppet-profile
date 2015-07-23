@@ -30,5 +30,6 @@ class profile::mac_base {
   include profile::munki::munkitools
   include profile::profiles::base_profiles
   include profile::puppet::clean_reports
+  include profile::profiles::remove_profiles
   # include profile::puppet::pluginsync # This should be included in common hiera (hopefully)
 }
