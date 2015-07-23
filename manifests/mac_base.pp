@@ -1,8 +1,8 @@
 # Base class that gets applied to all Macs
 class profile::mac_base {
-  # if $::osfamily != 'Darwin' {
-  #   fail("unsupported osfamily: ${::osfamily}")
-  # }
+  if $::osfamily != 'Darwin' {
+    fail("unsupported osfamily: ${::osfamily}")
+  }
 
   $min_os_version = '10.9'
 
@@ -30,5 +30,5 @@ class profile::mac_base {
   include profile::munki::munkitools
   include profile::profiles::base_profiles
   include profile::puppet::clean_reports
-  include profile::puppet::pluginsync
+  # include profile::puppet::pluginsync # This should be included in common hiera (hopefully)
 }
