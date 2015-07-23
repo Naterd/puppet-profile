@@ -1,5 +1,5 @@
 #!/bin/bash
-# Last modified June 15, 2015 - Burlison
+# Last modified July 23, 2015 - Burlison
 
 # When performing a search, search the current folder by default
 /usr/bin/defaults write com.apple.finder FX/usr/bin/defaultsearchScope -string "SCcf"
@@ -53,4 +53,4 @@
 /usr/bin/defaults write com.apple.finder SidebarSharedSectionDisclosedState -bool true
 
 # Restart Dock
-/usr/bin/killall Dock
+/usr/bin/killall Finder
