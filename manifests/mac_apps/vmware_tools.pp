@@ -13,7 +13,7 @@ class profile::mac_apps::vmware_tools {
     }
     
     exec { "Install vmware tools":
-        command => $script,
+        command => '/private/tmp/install_vmware_tools.sh',
         creates => "/Library/Application Support/VMware Tools/vmware-tools-cli",
         require => File['/private/tmp/install_vmware_tools.sh'],
     }
