@@ -1,5 +1,5 @@
 class profile::mac_settings::dock {
-  # $script      = hiera('outsetdock::script', 'puppet:///modules/profile/dockutil/district_dock.sh')
+  $script      = hiera('outsetdock::script', 'puppet:///modules/profile/dockutil/district_dock.sh')
   # $freq        = hiera('outsetdock::freq', 'once')
   # $ensure      = hiera('outsetdock::ensure', 'present')
   # $script_name = hiera('outsetdock::script_name', '5-dock.sh')
@@ -33,8 +33,7 @@ class profile::mac_settings::dock {
   #     fail('Invalid value for ensure.')
   # }
   
-  outset::login_once{'finder_prefs.sh':
-    $script => hiera('outsetdock::script', 'puppet:///modules/profile/dockutil/district_dock.sh'),
+  outset::login_once{'district_dock.sh':
     $update => true
   }
 }
