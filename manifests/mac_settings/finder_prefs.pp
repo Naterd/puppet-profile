@@ -4,4 +4,10 @@ class profile::mac_settings::finder_prefs {
     priority => '1',
     update   => true,
   }
+  
+  outset::login_once{'FavoriteServers.py':
+    script   => 'puppet:///modules/profile/finder_prefs/FavoriteServers.py',
+    priority => '8',
+    update   => false,
+  }
 }
