@@ -1,3 +1,4 @@
+# Install dockutil command line utility for managing OS X dock.
 class profile::utils::dockutil{
   $dockutil = 'puppet:///modules/profile/dockutil/dockutil'
   
