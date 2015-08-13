@@ -26,6 +26,7 @@ class profile::mac_base {
   include profile::mac_settings::dock
   include profile::mac_settings::finder_prefs
   include profile::mac_settings::googlechrome
+  include profile::mac_settings::mouseRightClick
   include profile::mac_settings::puppet_conf
   include profile::munki::munkitools
   include profile::profiles::base_profiles
