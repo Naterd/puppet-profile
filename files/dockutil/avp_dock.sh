@@ -8,12 +8,12 @@ dockutil --add /Applications/Launchpad.app --no-restart
 dockutil --add /Applications/Mission\ Control.app --no-restart
 dockutil --add /Applications/Google\ Chrome.app --no-restart
 dockutil --add /Applications/Safari.app --no-restart
-dockutil --add /Applications/Adobe\ After\ Effects\ CC\ 2014/Adobe\ After\ Effects\ CC\ 2014.app --no-restart
-dockutil --add /Applications/Adobe\ Photoshop\ CC\ 2014/Adobe\ Photoshop\ CC\ 2014.app --no-restart
-dockutil --add /Applications/Adobe\ Premiere\ Pro\ CC\ 2014/Adobe\ Premiere\ Pro\ CC\ 2014.app --no-restart
+dockutil --add /Applications/Adobe\ After\ Effects\ CC\ 2015/Adobe\ After\ Effects\ CC\ 2015.app --no-restart
+dockutil --add /Applications/Adobe\ Photoshop\ CC\ 2015/Adobe\ Photoshop\ CC\ 2015.app --no-restart
+dockutil --add /Applications/Adobe\ Premiere\ Pro\ CC\ 2015/Adobe\ Premiere\ Pro\ CC\ 2015.app --no-restart
 
-if [ -d "/Applications/Logic\ Pro.app" ]; then
-  dockutil --add /Applications/Logic\ Pro.app --no-restart
+if [ -d "/Applications/Logic\ Pro\ X.app" ]; then
+  dockutil --add /Applications/Logic\ Pro\ X.app --no-restart
 fi
 
 if [ -d "/Applications/Calendar.app" ]; then
